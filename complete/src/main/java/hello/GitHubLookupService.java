@@ -16,6 +16,10 @@ public class GitHubLookupService {
 
     private final RestTemplate restTemplate;
 
+    /*
+    Spring Boot automatically provides a RestTemplateBuilder that customizes
+    the defaults with any auto-configuration bits (i.e. MessageConverter).
+     */
     public GitHubLookupService(RestTemplateBuilder restTemplateBuilder) {
         this.restTemplate = restTemplateBuilder.build();
     }
